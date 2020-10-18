@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="jumbotron">
+        <p>Pengecekan Username: </p>
+        {% if result :%}
+            <p>Username sudah OK!</p>
+        {% else %}
+        <ul>
+            {% if not is_upper: %}
+                <li>username belum menggunakan uppercase</li>
+            {% endif %}
+            {% if not is_lower: %}
+                <li>username belum menggunakan lowercase</li>
+            {% endif %}
+            {% if not is_end_num: %}
+                <li>username belum menggunakan sebuah nomor dibelakang</li>
+            {% endif %}
+        {% endif %}
+        </ul>
+    </div>
+{% endblock%}

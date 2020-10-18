@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Silahkan masukan username sesuai ketentuan</h1>
+        <form action="{{url_for('check')}}">
+            <label for='username'>Username :</label>
+            <input type="text" name='username'>
+            <input type="submit" value="daftar">
+        </form>
+    </div>
+{% endblock %}

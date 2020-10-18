@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content%}
+<div class="jumbotron">
+    <h1>Selamat datang di form pendaftaran</h1>
+    <p>Hai, silahkan mengisi form dibawah ini untuk pendaftaran</p>
+    <form action="{{url_for('thankyou')}}">
+        <label for="Nama Depan">Nama Depan:</label>
+        <input type="text" name="first">
+        <label for="Nama Belakang">Nama Belakang:</label>
+        <input type="text" name="last">
+        <input type="submit" value="daftar">
+    </form>
+</div>
+{% endblock%}
